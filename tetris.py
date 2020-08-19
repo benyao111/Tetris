@@ -1,21 +1,7 @@
-#################################################
-# hw6.py: Tetris!
-#
-# Your name:
-# Your andrew id:
-#
-# Your partner's names:
-# Your partner's andrew ids:
-#################################################
 
-#import cs112_m20_unit8_linter
 import math, copy, random
 
 from cmu_112_graphics import *
-    
-#################################################
-# Helper functions
-#################################################
 
 def almostEqual(d1, d2, epsilon=10**-7):
     # note: use math.isclose() outside 15-112 with Python version 3.5 or later
@@ -23,15 +9,9 @@ def almostEqual(d1, d2, epsilon=10**-7):
 
 import decimal
 def roundHalfUp(d):
-    # Round to nearest with ties going away from zero.
     rounding = decimal.ROUND_HALF_UP
-    # See other rounding options here:
-    # https://docs.python.org/3/library/decimal.html#rounding-modes
     return int(decimal.Decimal(d).to_integral_value(rounding=rounding))
 
-#################################################
-# Functions for you to write
-#################################################
 def timerFired(app):
     if app.isGameOver == False:
     #moveFallingPiece(app, 0, 0)
